@@ -15,14 +15,22 @@ app.listen(PORT, ()=>{
 })
 
 
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
-        console.log("MongoDB Connected Succesfully!");
-    })
-    .catch((error) => {
-        console.log(`${error}`);
-});
+// mongoose.connect(process.env.MONGO_URI)
+//     .then(() => {
+//         console.log("MongoDB Connected Succesfully!");
+//     })
+//     .catch((error) => {
+//         console.log(`${error}`);
+// });
 
+
+mongoose.connect(process.env.MONGO_UR, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB Atlas');
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB Atlas:', error.message);
+  });
 
 
 
