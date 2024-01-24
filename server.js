@@ -2,7 +2,7 @@ const express = require("express");
 const dotEnv = require("dotenv");
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-var MongoDBStore = require('connect-mongodb-session')(session);
+
 
 
 const PORT = process.env.PORT || 5000;
